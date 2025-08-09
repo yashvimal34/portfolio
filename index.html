@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="images/avatar.webp">
+  <title>Yash Vimal - Web Developer</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  </style>
+</head>
+
+<body>
+  <!-- Loader Screen -->
+  <div id="loader">
+    <div class="loader-bar">
+      <span class="loader-square"></span>
+      <span class="loader-square"></span>
+      <span class="loader-square"></span>
+      <span class="loader-square"></span>
+      <span class="loader-square"></span>
+      <span class="loader-square"></span>
+      <span class="loader-square"></span>
+      <span class="loader-square"></span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="d-flex">
+      <!-- Sidebar -->
+      <nav id="sidebar" class="p-3">
+        <div class="logo mb-5 text-center">
+          <!-- Replace yash.png with your logo -->
+          <img src="images/yash.png" alt="YASH" class="img-fluid" />
+        </div>
+
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a href="#home" class="nav-link"><i class="fa fa-home"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link"><i class="fa fa-user"></i> About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#education" class="nav-link"><i class="fa fa-user"></i> Education</a>
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link"><i class="fa fa-briefcase"></i> Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link"><i class="fa fa-graduation-cap"></i> Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#courses" class="nav-link"><i class="fa fa-cubes"></i> Relevant Courses</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link"><i class="fa fa-comment-dots"></i> Contact</a>
+          </li>
+        </ul>
+
+        <div class="theme-toggle mt-4">
+          <button id="themeBtn"><i class="fa fa-moon"></i> Dark Mode</button>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <div id="content" class="flex-grow-1">
+
+        <!-- Mobile sidebar toggle button -->
+        <button id="openSidebar" class="btn btn-dark m-3 d-lg-none">
+          <i class="fa fa-bars"></i>
+        </button>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section d-flex align-items-center justify-content-center">
+          <div class="hero-content text-center">
+            <div class="avatar mb-3">
+              <img src="images/avatar.webp" alt="YASH" class="rounded-circle">
+            </div>
+            <h1 class="hero-title">Yash Vimal</h1>
+            <p class="hero-subtitle">
+              <span>I'm</span> <span id="role-text">Full Stack Developer</span>
+            </p>
+
+            <div class="hero-social mt-3">
+              <a href="https://www.linkedin.com/in/yash-vimal-08a978285/" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/yashvimal34" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+
+            <button class="btn btn-danger mt-4"><a href="#contact" class="text-white"
+                style="text-decoration: none;">Contact</a></button>
+          </div>
+
+          <!-- Scroll Down -->
+          <div class="scroll-indicator text-center">
+            <p>Scroll Down</p>
+            <div class="mouse" id="scrollDownBtn">
+              <div class="wheel"></div>
+
+            </div>
+          </div>
+
+
+
+          <!-- Floating shapes -->
+          <div class="floating-shapes">
+            <span class="shape"></span>
+            <span class="shape"></span>
+            <span class="shape"></span>
+            <span class="shape"></span>
+            <span class="shape"></span>
+            <span class="shape"></span>
+            <span class="shape"></span>
+            <span class="shape"></span>
+          </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section py-5">
+          <div class="container">
+            <h2 class=" mb-5">About Me</h2>
+            <div class="row">
+
+              <!-- Profile Image -->
+              <div class="col-md-4 text-center mb-4 mb-md-0">
+                <img src="images/yash3.jpg" alt="Yash Photo" class="about-photo rounded-circle img-fluid shadow">
+              </div>
+
+              <!-- About Text & Skills -->
+              <div class="col-md-8">
+                <div class="about-box p-4 rounded shadow">
+                  <div class="row">
+                    <!-- Left Column: About Text -->
+                    <div class="col-md-6">
+                      <p class="lead">
+                        I'm <strong>Yash Vimal</strong>, a <strong>Backend Developer, Frontend Developer and Python
+                          Developer</strong>.
+                        I specialize in building robust <strong>Backend systems</strong> and have a strong grasp of
+                        <strong>Full Stack Development and Python Development</strong>. My work involves leveraging
+                        technology to solve
+                        complex problems effectively.
+                      </p>
+                    </div>
+
+                    <!-- Right Column: Skills -->
+                    <div class="col-md-6">
+                      <div class="skills">
+                        <div class="mb-3">
+                          <label>Backend Development</label>
+                          <div class="progress">
+                            <div class="progress-bar bg-danger" data-progress="90"></div>
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label>Frontend Development</label>
+                          <div class="progress">
+                            <div class="progress-bar bg-primary" data-progress="75"></div>
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label>Problem Solving</label>
+                          <div class="progress">
+                            <div class="progress-bar bg-warning" data-progress="85"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Resume Button at the bottom -->
+                  <div class="mt-4">
+                    <a href="images/cv/YashVimal_Resume_2.pdf"><button class="btn btn-danger">View Resume</button></a>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+
+            <!-- Stats Section -->
+            <div class="row text-center mt-5">
+              <!-- <div class="col-6 col-md-3 mb-4">
+                <i class="fa fa-award fa-2x mb-2"></i>
+                <h5>2.0 +</h5>
+                <p>Years of Experience</p>
+              </div> -->
+              <div class="col-8 col-md-4 mb-4">
+                <i class="fa fa-users fa-2x mb-2"></i>
+                <h5>2.0 +</h5>
+                <p>Years of Programming</p>
+              </div>
+              <div class="col-8 col-md-4 mb-4">
+                <i class="fa fa-fire fa-2x mb-2"></i>
+                <h5>4 +</h5>
+                <p>Projects Completed</p>
+              </div>
+              <div class="col-8 col-md-4 mb-4">
+                <i class="fa fa-mug-hot fa-2x mb-2"></i>
+                <h5>500 +</h5>
+                <p>Cups of Coffee</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Education Section -->
+       <section id="education" class="education-section">
+  <div class="container">
+    <h2 class="section-title my-5">Education</h2>
+
+    <div class="timeline">
+
+      <!-- Education Item 1 -->
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="timeline-content">
+          <h5 class="timeline-date">2023 - 2026*</h5>
+          <h4 class="timeline-title">BCA - Bachelor of Computer Science</h4>
+          <h6 class="timeline-institute">Chatrapati Sahuji Maharaj University, Kanpur</h6>
+          <h5 class="timeline-date">2025 - Mar to 2025 - Jul</h5>
+          <h4 class="timeline-title">Logic ERA</h4>
+          <ul>
+            <li>Learned MERN Stack</li>
+            <li>Completed some academic projects showcasing programming and real world problem-solving skills</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Education Item 2 -->
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fa-solid fa-school"></i>
+        </div>
+        <div class="timeline-content">
+          <h5 class="timeline-date">2022 - 2023</h5>
+          <h4 class="timeline-title">Higher Secondary Education</h4>
+          <h6 class="timeline-institute">Adarsh Vidya Mandir Public School, Unnao (CBSE)</h6>
+          <ul>
+            <li>Science Stream with Mathematics</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section py-5">
+          <div class="container">
+            <h2 class="mb-5">Skills</h2>
+
+            <div class="row justify-content-center g-4">
+              <!-- Glow backgrounds -->
+              <div class="skill-glow glow-backend"></div>
+              <div class="skill-glow glow-app"></div>
+              <div class="skill-glow glow-ml"></div>
+
+              <!-- Skill Card 1 -->
+              <div class="col-md-4">
+                <div class="skill-card text-center p-4" style="background-color:#5148cc;">
+                  <div class="skill-icon mb-3">
+                    <i class="fa fa-code fa-3x"></i>
+                  </div>
+                  <h4 class="mb-2">MERN Stack</h4>
+                  <p>MongoDB | Express | React | Node.js</p>
+                </div>
+              </div>
+
+              <!-- Skill Card 2 -->
+              <div class="col-md-4">
+                <div class="skill-card text-center p-4" style="background-color:#cc7a00;">
+                  <div class="skill-icon mb-3">
+                    <img src="images/python.png" alt="VS Code" width="50" height="50" style="border-radius:8px;">
+                  </div>
+                  <h4 class="mb-2">Python Development</h4>
+                  <p>Flask | Numpy | Pandas</p>
+                </div>
+              </div>
+
+              <!-- Skill Card 3 -->
+              <div class="col-md-4">
+                <div class="skill-card text-center p-4" style="background-color:#d75b4d;">
+                  <div class="skill-icon mb-3">
+                    <img src="images/ds.png" alt="Data Science" width="50" height="50" style="border-radius:8px;">
+                  </div>
+                  <h4 class="mb-2">Data Science - Present*</h4>
+                  <p>Python | Numpy | Pandas</p>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Tools Which I Used -->
+
+            <!-- Tools I Use for Coding -->
+
+            <div class="row justify-content-center g-4 my-5">
+
+              <!-- VS Code -->
+               <h5>Tools & Platforms</h5>
+              <div class="col-md-4">
+                <div class="skill-card text-center p-4 tool-hover" style="background-color:#34d399">
+                  <div class="skill-icon mb-3">
+                    <img src="images/skills/vs.png" alt="VS Code" width="60" height="60" style="border-radius:8px;">
+                  </div>
+                  <h4 class="mb-2">VS Code</h4>
+                  <p>Primary code editor or IDE for all development technologies</p>
+                </div>
+              </div>
+              <!-- Anaconda -->
+              <div class="col-md-4">
+                <div class="skill-card text-center p-4 tool-hover" style="background-color:#0096c7">
+                  <div class="skill-icon mb-3">
+                    <img src="images/skills/anaconda.svg" alt="Anaconda" width="60" height="60">
+                  </div>
+                  <h4 class="mb-2">Anaconda</h4>
+                  <p>Environment & package manager for Python and ML</p>
+                </div>
+              </div>
+
+              <!-- Jupyter Notebook -->
+              <div class="col-md-4">
+                <div class="skill-card text-center p-4 tool-hover" style="background-color:#fbbf24">
+                  <div class="skill-icon mb-3">
+                    <img src="images/skills/jupyter.svg" alt="Jupyter Notebook" width="60" height="60">
+                  </div>
+                  <h4 class="mb-2">Jupyter Notebook</h4>
+                  <p>Data science & ML experiments and analysis</p>
+                </div>
+              </div>
+
+            </div>
+            <!-- Tools Section Ended -->
+
+            <div class="text-center mt-4">
+              <p>
+                Click <a href="#contact" class="contact-link">here</a> to contact me! 👋
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects Section -->
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+          <div class="container">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="row g-4">
+              <!-- Project Card 1 -->
+              <div class="col-md-6">
+                <div class="project-item">
+                  <a href="https://www.youtube.com/watch?v=ATtTyhDw9Xc" style="text-decoration: none;">
+                  <span class="project-badge">Admin Panel</span>
+                  <img src="images/project/adminPanel.jpg" alt="Project 1" class="project-image">
+                  <div class="project-info">
+                    <h5 class="project-name">Dashboard • REST API (Representational State Transfer)</h5>
+                    <p class="project-meta">MERN • MongoDB, Express.js, React.js, Node.js</p>
+                  </div>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Project Card 2 -->
+              <div class="col-md-6">
+                <div class="project-item">
+                  <span class="project-badge">Expense Tracker <span style="font-size: 15px;">*</span></span>
+                  <img src="images/project/Exprense.jpg" alt="Project 2" class="project-image">
+                  <div class="project-info">
+                    <h5 class="project-name">Status • In Progress *</h5>
+                    <p class="project-meta">MERN • MongoDB, Express.js, React.js, Node.js</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project Card 3 -->
+              <div class="col-md-6">
+                <div class="project-item">
+                  <a href="https://www.youtube.com/watch?v=HzzAWEaJOnA" style="text-decoration: none;">
+                  <span class="project-badge">Web Application</span>
+                  <img src="images/project/vidsnap.jpg" alt="Project 3" class="project-image">
+                  <div class="project-info">
+                    <h5 class="project-name">VidSnapAI • Reel Generator using API</h5>
+                    <p class="project-meta">Python • Flask, ElevenLabs AI</p>
+                  </div>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Project Card 4 -->
+              <div class="col-md-6">
+                <div class="project-item">
+                  <span class="project-badge">News App</span>
+                  <img src="images/project/newsApp.jpg" alt="Project 4" class="project-image">
+                  <div class="project-info">
+                    <h5 class="project-name">News App using API</h5>
+                    <p class="project-meta">Python • Flask, NewsAPI</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Relevant Courses Section -->
+        <!-- Relevant Courses Section -->
+        <section id="courses" class="courses-section">
+          <div class="container">
+            <h2 class="section-title">Relevant Courses</h2>
+            <div class="row g-4">
+
+              <!-- Course 1 -->
+              <div class="col-md-4 col-sm-6" data-platform="udemy">
+                <a href="https://www.udemy.com/certificate/UC-48b6f893-cba1-4213-93d7-f911a2d867e1/" target="_blank"
+                  class="course-card-link" style="text-decoration: none;">
+                  <div class="course-card p-4">
+                    <img class="platform-logo" src="images/udemy.png" alt="platform logo">
+                    <h5 class="course-title text-black">Python Programming</h5>
+                    <p class="course-desc">
+                      Complete 2025 Python Bootcamp Python from Scratch
+                    </p>
+                    <span class="img-txt text-black">
+                      <img class="platform" src="images/python.png" alt="platform logo" width="100" height="100">
+                      <b>Code with Harry</b>
+                    </span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Course 2 -->
+              <div class="col-md-4 col-sm-6" data-platform="coursera">
+                <a href="https://simpli-web.app.link/e/Eele1qFcoVb" target="_blank" class="course-card-link"
+                  style="text-decoration: none;">
+                  <div class="course-card p-4">
+                    <img class="platform-logo simplilearn" src="images/Simplilearn.png" alt="platform logo">
+                    <h5 class="course-title">Intro - MERN STACK</h5>
+                    <p class="course-desc text-white">
+                      Completed Fundamentals MERN stack development training online
+                    </p>
+                    <span class="img-txt text-black">
+                      <img class="platform" src="images/mern.png" alt="platform logo" width="100" height="100">
+                      <b>Simplilearn</b>
+                    </span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Course 3 -->
+              <div class="col-md-4 col-sm-6" data-platform="logic">
+                <a href="pdf/Yash_Vimal_mern.pdf" target="_blank" class="course-card-link" style="text-decoration: none;">
+                  <div class="course-card p-4">
+                    <img class="platform-logo" src="images/logic1.png" alt="platform logo">
+                    <h5 class="course-title text-black">MERN STACK</h5>
+                    <p class="course-desc">
+                      Completed an extensive MERN Stack course covering MongoDB, Express.js, React.js,
+                      and Node.js.
+                    </p>
+                    <span class="img-txt text-black">
+                      <img class="platform" src="images/mern.png" alt="platform logo" width="100" height="100">
+                      <b>LogicEra</b>
+                    </span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Course 5 -->
+              <div class="col-md-4 col-sm-6" data-platform="MU">
+                <a href="pdf/Yash Vimal Web.pdf" target="_blank" class="course-card-link"
+                  style="text-decoration: none;">
+                  <div class="course-card p-4">
+                    <img class="platform-logo" src="images/MU.png" alt="platform logo">
+                    <h5 class="course-title text-black">Web Development</h5>
+                    <p class="course-desc">
+                      I had satisfactorily completed all requirements for all the courses
+                      Full Stack Web Development
+                    </p>
+                    <span class="img-txt text-black">
+                      <img class="platform" src="images/wd.png" alt="platform logo" width="100" height="100">
+                      <b>MU Computer Mind</b>
+                    </span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Course 6 -->
+              <div class="col-md-4 col-sm-6" data-platform="CWH">
+                <a href="https://www.codewithharry.com/courses/the-ultimate-job-ready-data-science-course"
+                  target="_blank" class="course-card-link" style="text-decoration: none;">
+                  <div class="course-card p-4">
+                    <img class="platform-logo" src="images/cwh.png" alt="platform logo">
+                    <h5 class="course-title text-black">Data Science *</h5>
+                    <p class="course-desc">
+                      Currently upskilling in Data Science using Python (Numpy, Pandas) with one Project with pure
+                      Python code.
+                    </p>
+                    <span class="img-txt text-black">
+                      <img class="platform" src="images/ds.png" alt="platform logo" width="80" height="80">
+                      <b>Code with Harry</b>
+                    </span>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+          </div>
+          <!-- Course 4 -->
+          <!-- <div class="col-md-4 col-sm-6" data-platform="coursera">
+        <div class="course-card p-4">
+          <img class="platform-logo coursera" src="images/coursera.png" alt="platform logo">
+          <h5 class="course-title">Computer Networks</h5>
+          <p class="course-desc">OSI model, TCP/IP, network protocols, routing, and socket programming.</p>
+        </div>
+      </div> -->
+        </section>
+
+        <section id="contact" class="contact-section py-20">
+  <div class="container">
+    <h2 class="section-title mb-12 my-5">Get In Touch</h2>
+    <div class="contact-wrapper">
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h3>Let's Talk</h3>
+        <p>If you have any project in mind or just want to say hello, feel free to drop a message.</p>
+      </div>
+
+      <!-- Contact Form -->
+      <form id="contactForm" class="contact-form" action="https://formspree.io/f/xgvzzweq" method="post">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required />
+        </div>
+        <div class="form-group">
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Send Message</button>
+        <p id="form-status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- GSAP and ScrollTrigger (must load before your gsap.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- Lenis Library (must load before your lenis.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.36/dist/lenis.min.js"></script>
+  
+  <!-- Your custom scripts (after libraries) -->
+  <script src="js/script.js"></script>
+  <script src="js/active.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/rotating.js"></script>
+  <script src="js/bar.js"></script>
+  <script src="js/course.js"></script>
+  <script src="js/course1.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/gsap.js"></script>
+  <script src="js/lenis.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/loader.js"></script>
+</body>
+</html>
