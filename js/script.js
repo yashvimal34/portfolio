@@ -1,19 +1,70 @@
 document.addEventListener('DOMContentLoaded', () => {
   const sidebar = document.getElementById('sidebar');
   const openBtn = document.getElementById('openSidebar');
+  const overlay = document.getElementById('sidebarOverlay');
   const themeBtn = document.getElementById('themeBtn');
+
+  // Show/hide mobile menu button based on screen size
+  function toggleMobileButton() {
+    if (window.innerWidth < 992) {
+      if (openBtn) openBtn.style.display = 'block';
+    } else {
+      if (openBtn) openBtn.style.display = 'none';
+      if (sidebar) sidebar.classList.remove('active');
+      if (overlay) overlay.style.display = 'none';
+    }
+  }
+
+  // Initial check
+  toggleMobileButton();
+  window.addEventListener('resize', toggleMobileButton);
 
   // Sidebar toggle for mobile
   if (openBtn) {
     openBtn.addEventListener('click', () => {
       sidebar.classList.add('active');
+      if (overlay) {
+        overlay.style.display = 'block';
+        setTimeout(() => overlay.style.opacity = '1', 10);
+      }
     });
   }
 
-  document.addEventListener('click', (e) => {
-    if (sidebar && openBtn && !sidebar.contains(e.target) && !openBtn.contains(e.target) && window.innerWidth < 992) {
+  // Close sidebar when clicking overlay
+  if (overlay) {
+    overlay.addEventListener('click', () => {
       sidebar.classList.remove('active');
+      overlay.style.opacity = '0';
+      setTimeout(() => overlay.style.display = 'none', 300);
+    });
+  }
+
+  // Close sidebar when clicking outside on mobile
+  document.addEventListener('click', (e) => {
+    if (window.innerWidth < 992) {
+      if (sidebar && openBtn && overlay && 
+          !sidebar.contains(e.target) && 
+          !openBtn.contains(e.target) && 
+          sidebar.classList.contains('active')) {
+        sidebar.classList.remove('active');
+        overlay.style.opacity = '0';
+        setTimeout(() => overlay.style.display = 'none', 300);
+      }
     }
+  });
+
+  // Close sidebar when clicking nav links on mobile
+  const navLinks = document.querySelectorAll('#sidebar .nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 992) {
+        sidebar.classList.remove('active');
+        if (overlay) {
+          overlay.style.opacity = '0';
+          setTimeout(() => overlay.style.display = 'none', 300);
+        }
+      }
+    });
   });
 
   // Theme toggle
